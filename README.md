@@ -2,16 +2,25 @@
 
 ## Make folder
 ```
-mkdir dataset/line_kg
-mkdir code_line/result
-mkdir code_line/result/embedding
-mkdir code_line/result/pairs
-cd dataset/
+mkdir LINE_2nd/dataset/line_kg
+cd LINE_2nd/dataset/
 unzip v4_kg.zip
 cd ..
 ```
+### For WeiLe's experiment
+```
+mkdir LINE_2nd/code_line/WeiLe/result
+mkdir LINE_2nd/code_line/WeiLe/result/embedding
+mkdir LINE_2nd/code_line/WeiLe/result/pairs
+```
+### For YuHsuan's experiment
+```
+mkdir LINE_2nd/code_line/YuHsuan/result
+mkdir LINE_2nd/code_line/nrms-transformer/embedding_result
+```
 
 ## Description
+### For WeiLe's experiment
 This is the experiment before 31/08/2022 <br>
 * Dataset preprocess 
     * 1: Preprocess ground truth csv
@@ -24,6 +33,15 @@ This is the experiment before 31/08/2022 <br>
 * Analysis
     * LINE pairs cosine similarity vs overlap meta or Jacaard
     * LINE union SBert pairs --> Reranked by p*LINE + (1-p)*SBert
+### For YuHsuan's experiment
+This is the experiment before 30/04/2023 <br>
+* LINE model
+    * 1 : nrms-transformer-->SBERT-->get SBERT embeddings
+    * 2 : Smore-->LINE-->get LINE embeddings (The SBERT embeddings get involved as well)
+    * 3 : LINE embeddings -->Evaluation --> result txt
+* Analysis
+    * The efficacy of negative sample punishment on LINE
+    * The efficacy of LINE + SBERT embedding
 
 ## Environment
 - Step1: Create enviroment with python 3.7
@@ -41,11 +59,23 @@ cd code_dataset/
 sh gen.sh
 cd ..
 ```
-
+### For WeiLe's experiment
 * LINE model
 ```
-cd code_line/
+cd code_line/WeiLe/
 sh run_line.sh
 sh run_score.sh
+sh run_eval.sh
+```
+### For YuHsuan's experiment
+* SBERT model
+```
+cd code_line/YuHsuan/
+sh run_sbert.sh
+```
+* LINE model
+```
+cd code_line/YuHsuan/
+sh run_line.sh
 sh run_eval.sh
 ```

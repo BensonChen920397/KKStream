@@ -547,7 +547,7 @@ if __name__ == '__main__':
     device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
     pretrained_model = 'bert-base-multilingual-cased'
     pretrained_ckpt = ''
-    model_path = Path('/tmp2/yhchen/KKStream_project/LINE/LINE_2nd/code_line/nrms-transformer/model_status')
+    model_path = Path('../model_status')
 
     if if_pooling == 'true':
         if_pooling_suffix = '1'
@@ -568,13 +568,13 @@ if __name__ == '__main__':
     print("]")
 
     if with_meta=='true':
-        embed_path = Path('/tmp2/yhchen/KKStream_project/LINE/LINE_2nd/code_line/nrms-transformer/embedding_result/fourtower.embed')
+        embed_path = Path('../embedding_result/fourtower.embed')
         fourtower = FourTower(pretrained_model, if_pooling, 2)
         if pretrained_ckpt:
             fourtower.load_state_dict(torch.load(model_path/pretrained_ckpt))
         fourtower.to(device)
     else:
-        embed_path = Path('/tmp2/yhchen/KKStream_project/LINE/LINE_2nd/code_line/nrms-transformer/embedding_result/twotower.embed')
+        embed_path = Path('../embedding_result/twotower.embed')
         twotower = TwoTower(pretrained_model, if_pooling)
         if pretrained_ckpt:
             twotower.load_state_dict(torch.load(model_path/pretrained_ckpt))
@@ -584,7 +584,7 @@ if __name__ == '__main__':
         kg_text_path=Path('../../dataset/line_kg/line-kg.idx.txt'),
         kg_path=Path('../../dataset/line_kg/line-kg.txt'),
         pretrained_model=pretrained_model,
-        pickle_path=Path(f'/tmp2/yhchen/KKStream_project/LINE/LINE_2nd/code_line/nrms-transformer/code2tokens'),
+        pickle_path=Path(f'../code2tokens'),
         with_meta=with_meta,
         device=device,
     )
@@ -596,7 +596,7 @@ if __name__ == '__main__':
     dataloader = torch.utils.data.DataLoader(
         pairs_dataset(
             train_pairs_path=Path(pairs_path),
-            code2tokens_path=Path('/tmp2/yhchen/KKStream_project/LINE/LINE_2nd/code_line/nrms-transformer/code2tokens'),
+            code2tokens_path=Path('../code2tokens'),
             with_meta=with_meta,
             negative_type=negative_type,
         ),

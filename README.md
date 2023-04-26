@@ -16,7 +16,7 @@ mkdir LINE_2nd/code_line/WeiLe/result/pairs
 ### For YuHsuan's experiment
 ```
 mkdir LINE_2nd/code_line/YuHsuan/result
-mkdir LINE_2nd/code_line/nrms-transformer/embedding_result
+mkdir LINE_2nd/nrms-transformer/embedding_result
 ```
 
 ## Description

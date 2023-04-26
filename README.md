@@ -13,6 +13,7 @@ cfda4 : /tmp2/yhchen/KKStream_project/KKStream_dataset/v4_kg
 mkdir LINE_2nd/dataset/line_kg
 cd LINE_2nd/dataset/
 unzip v4_kg.zip
+unzip rac_gt.zip
 cd ..
 ```
 ### For WeiLe's experiment

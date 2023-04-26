@@ -1,5 +1,4 @@
 # KKStream Project 
-```
 ## Make folder
 ```
 mkdir LINE_2nd/dataset/line_kg

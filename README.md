@@ -1,5 +1,13 @@
-## KKStream Project 
+# KKStream Project 
 
+## Data Path
+cfda4 : /tmp2/yhchen/KKStream_project/KKStream_dataset/v4_kg
+```
+ v4_kg
+ ├── all_kg.txt
+ ├── tv_triplet.txt
+ └── vod_triplet.txt
+```
 ## Make folder
 ```
 mkdir LINE_2nd/dataset/line_kg

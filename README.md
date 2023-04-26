@@ -5,7 +5,7 @@ mkdir LINE_2nd/dataset/line_kg
 cd LINE_2nd/dataset/
 unzip v4_kg.zip
 unzip rac_gt.zip
-cd ..
+cd ../../
 ```
 ### For WeiLe's experiment
 ```

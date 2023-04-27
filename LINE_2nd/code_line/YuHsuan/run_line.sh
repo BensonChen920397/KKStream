@@ -13,8 +13,8 @@ do
         -dimensions $DIM \
         -threads 30 \
         -sample_times $ep \
-        -negative_samples 100 \
-        -pretrain ../nrms-transformer/embedding_result/fourtower.embed \
+        -negative_samples 10 \
+        -pretrain ../../nrms-transformer/embedding_result/fourtower.embed \
         -beta 0.3
     done
 done

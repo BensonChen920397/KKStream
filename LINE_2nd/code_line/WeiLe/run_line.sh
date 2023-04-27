@@ -1,6 +1,7 @@
 set -x  # Print commands and their arguments as they are executed.
 
 # to do : download smore package and change the path '/tmp2/weile/smore/cli/line' yourself 
+chmod +x ../../../smore/cli/line
 
 for ep in 500
 do

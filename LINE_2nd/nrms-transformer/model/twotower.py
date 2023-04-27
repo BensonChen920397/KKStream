@@ -660,7 +660,7 @@ if __name__ == '__main__':
     raw_dataset = RawDataset()
     dataloader_raw = torch.utils.data.DataLoader(
         raw_dataset(
-            code2tokens_path=Path('code2tokens'),
+            code2tokens_path=Path('../code2tokens'),
             with_meta=with_meta,
         ),
         batch_size=20

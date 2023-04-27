@@ -57,7 +57,7 @@ This is the experiment before 30/04/2023 <br>
 ## Run example
 * Dataset preprocess 
 ```
-cd code_dataset/
+cd LINE_2nd/code_dataset/
 sh gen.sh
 cd ..
 ```

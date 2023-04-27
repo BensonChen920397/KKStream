@@ -50,7 +50,9 @@ This is the experiment before 30/04/2023 <br>
   - ```pip install pandas```
   - ```pip install scipy``` 
   - ```pip install -q transformers==4.7.0 fugashi ipadic```
-  - ```pip install sklearn```
+  - ```pip install -U scikit-learn scipy matplotlib```
+  - ```pip install faiss-gpu```
+  - ```pip install sentence_transformers```
 
 ## Run example
 * Dataset preprocess 

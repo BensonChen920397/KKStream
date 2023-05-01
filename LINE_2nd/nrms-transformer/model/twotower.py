@@ -549,16 +549,6 @@ if __name__ == '__main__':
     pretrained_ckpt = ''
     model_path = Path('../model_status')
 
-    if if_pooling == 'true':
-        if_pooling_suffix = '1'
-    else:
-        if_pooling_suffix = '0'
-
-    if fixed_sampling == 'true':
-        fixed_sampling_suffix = '1'
-    else:
-        fixed_sampling_suffix = '0'
-
     # Print setting
     print("The setting of model is \n [")
     print("\tWith meta : ", with_meta)
